@@ -134,7 +134,7 @@ defmodule Nostrum.Consumer do
   @type message_delete_bulk :: {:MESSAGE_DELETE_BULK, MessageDeleteBulk.t(), WSState.t()}
   @type message_update ::
           {:MESSAGE_UPDATE, updated_message :: Nostrum.Struct.Message.t(), WSState.t()}
-  @type message_reaction_add :: {:MESSAGE_REACTION_ADD, map, WSState.t()}
+  @type message_reaction_add :: {:MESSAGE_REACTION_ADD, Nostrum.Struct.Message.NewReaction.t(), WSState.t()}
   @type message_reaction_remove :: {:MESSAGE_REACTION_REMOVE, map, WSState.t()}
   @type message_reaction_remove_all :: {:MESSAGE_REACTION_REMOVE_ALL, map, WSState.t()}
   @type message_reaction_remove_emoji :: {:MESSAGE_REACTION_REMOVE_EMOJI, map, WSState.t()}
