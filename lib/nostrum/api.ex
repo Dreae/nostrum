@@ -2919,6 +2919,7 @@ defmodule Nostrum.Api do
 
   defp handle_request_with_decode(response)
   defp handle_request_with_decode({:ok, body}), do: {:ok, Poison.decode!(body, keys: :atoms)}
+  defp handle_request_with_decode({:ok}), do: {:ok}
   defp handle_request_with_decode({:error, _} = error), do: error
 
   defp handle_request_with_decode(response, type)
